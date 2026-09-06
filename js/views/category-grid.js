@@ -60,7 +60,7 @@ function buildCategoryGrid() {
 
   // Footer Row with Book Totals
   html += `
-      <tr style="background:#FAF8F5;font-weight:700">
+      <tr style="background:#F5F3EE;font-weight:700">
         <td>${lang === 'zh' ? '各卷書總計' : 'Book Totals'}</td>
         ${BOOK_KEYS.map(k => {
           const bTotal = COMMANDMENTS.filter(c => c.books && c.books[k]).length;

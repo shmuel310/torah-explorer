@@ -188,15 +188,15 @@ function buildNarTimeline() {
 
   // Group by periods
   const periods = [
-    { id: 'primeval', title_zh: '太古歷史（亞當至挪亞）', title_en: 'Primeval History (Genesis 1–11)', color: '#44403C' },
-    { id: 'abraham', title_zh: '亞伯拉罕生平之約', title_en: 'Patriarch Abraham (Genesis 12–25)', color: '#7C3AED' },
-    { id: 'isaac_jacob', title_zh: '以撒與雅各生平', title_en: 'Isaac and Jacob (Genesis 25–36)', color: '#2563EB' },
-    { id: 'joseph', title_zh: '約瑟生平與以色列入埃及', title_en: 'Joseph in Egypt (Genesis 37–50)', color: '#0891B2' },
-    { id: 'exodus', title_zh: '出埃及與過紅海', title_en: 'The Exodus & Red Sea (Exodus 1–18)', color: '#DB2777' },
-    { id: 'sinai', title_zh: '西奈山立約與建造會幕', title_en: 'Sinai Covenant & Tabernacle (Exodus 19–40)', color: '#DC2626' },
-    { id: 'leviticus', title_zh: '利未記：祭司條例與聖潔生活', title_en: 'Leviticus: Offerings & Holiness (Leviticus 1–27)', color: '#16A34A' },
-    { id: 'wilderness', title_zh: '曠野四十年流浪', title_en: 'Wilderness Wanderings (Numbers 1–36)', color: '#D97706' },
-    { id: 'deuteronomy', title_zh: '摩押平原重申律法與摩西離世', title_en: 'Plains of Moab & Moses\' Farewell (Deuteronomy 1–34)', color: '#EA580C' }
+    { id: 'primeval', title_zh: '太古歷史（亞當至挪亞）', title_en: 'Primeval History (Genesis 1–11)', color: '#2B2B2B' },
+    { id: 'abraham', title_zh: '亞伯拉罕生平之約', title_en: 'Patriarch Abraham (Genesis 12–25)', color: '#4A5D73' },
+    { id: 'isaac_jacob', title_zh: '以撒與雅各生平', title_en: 'Isaac and Jacob (Genesis 25–36)', color: '#3E5064' },
+    { id: 'joseph', title_zh: '約瑟生平與以色列入埃及', title_en: 'Joseph in Egypt (Genesis 37–50)', color: '#5D7289' },
+    { id: 'exodus', title_zh: '出埃及與過紅海', title_en: 'The Exodus & Red Sea (Exodus 1–18)', color: '#934B43' },
+    { id: 'sinai', title_zh: '西奈山立約與建造會幕', title_en: 'Sinai Covenant & Tabernacle (Exodus 19–40)', color: '#7D3E37' },
+    { id: 'leviticus', title_zh: '利未記：祭司條例與聖潔生活', title_en: 'Leviticus: Offerings & Holiness (Leviticus 1–27)', color: '#C8A96A' },
+    { id: 'wilderness', title_zh: '曠野四十年流浪', title_en: 'Wilderness Wanderings (Numbers 1–36)', color: '#D6A84C' },
+    { id: 'deuteronomy', title_zh: '摩押平原重申律法與摩西離世', title_en: 'Plains of Moab & Moses\' Farewell (Deuteronomy 1–34)', color: '#526851' }
   ];
 
   periods.forEach((p, idx) => {

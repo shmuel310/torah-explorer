@@ -68,7 +68,7 @@ function buildTorahWheel() {
   let svg = `<svg viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <filter id="centerShadow">
-        <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#1C1917" flood-opacity="0.15"/>
+        <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#2B2B2B" flood-opacity="0.15"/>
       </filter>
     </defs>
   `;
@@ -126,10 +126,10 @@ function buildTorahWheel() {
 
   // Center Circle
   svg += `
-    <circle cx="${cx}" cy="${cy}" r="${rInner - 5}" fill="#FFFFFF" filter="url(#centerShadow)" stroke="#E8E4DC" stroke-width="2"/>
+    <circle cx="${cx}" cy="${cy}" r="${rInner - 5}" fill="#FFFFFF" filter="url(#centerShadow)" stroke="#EAE6DC" stroke-width="2"/>
     <g id="centerInfoGroup" style="pointer-events:none">
       <text id="centerIdText" x="${cx}" y="${cy - 24}" text-anchor="middle" font-size="12" font-weight="700" fill="#78716C">${lang === 'zh' ? '613 誡命' : '613 Mitzvot'}</text>
-      <text id="centerTitleText" x="${cx}" y="${cy}" text-anchor="middle" font-size="12" font-weight="600" fill="#1C1917" width="140">${lang === 'zh' ? '妥拉之輪' : 'Torah Wheel'}</text>
+      <text id="centerTitleText" x="${cx}" y="${cy}" text-anchor="middle" font-size="12" font-weight="600" fill="#2B2B2B" width="140">${lang === 'zh' ? '妥拉之輪' : 'Torah Wheel'}</text>
       <text id="centerRefText" x="${cx}" y="${cy + 22}" text-anchor="middle" font-size="10" fill="#A8A29E">${lang === 'zh' ? '點擊或懸停光標探索' : 'Hover or click to explore'}</text>
     </g>
   `;

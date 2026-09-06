@@ -76,10 +76,10 @@ function buildStreams() {
   });
 
   let svg = `
-    <svg viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" style="background:#FAF8F5;border-radius:10px;">
+    <svg viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" style="background:#F5F3EE;border-radius:10px;">
       <!-- Grid lines & X-axis labels -->
       ${dataPoints.map((d, ci) => `
-        <line x1="${d.x}" y1="${margin.top}" x2="${d.x}" y2="${margin.top + plotHeight}" stroke="#E8E4DC" stroke-width="1" stroke-dasharray="3,3"/>
+        <line x1="${d.x}" y1="${margin.top}" x2="${d.x}" y2="${margin.top + plotHeight}" stroke="#EAE6DC" stroke-width="1" stroke-dasharray="3,3"/>
         <text x="${d.x}" y="${margin.top - 14}" text-anchor="middle" font-size="9" font-weight="700" fill="${d.cat.color}">
           ${d.cat.num}
         </text>

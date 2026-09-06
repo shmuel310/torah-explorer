@@ -180,18 +180,18 @@ function buildJourneyMap() {
 
   // Create SVG map
   container.innerHTML = `
-    <svg viewBox="0 0 520 460" xmlns="http://www.w3.org/2000/svg" style="background:#F2EDE4;border-radius:10px;">
+    <svg viewBox="0 0 520 460" xmlns="http://www.w3.org/2000/svg" style="background:#F5F3EE;border-radius:10px;">
       <defs>
         <linearGradient id="seaGradient" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0%" stop-color="#C5E0ED" />
           <stop offset="100%" stop-color="#93C5DE" />
         </linearGradient>
         <linearGradient id="desertGradient" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#EDE2C8" />
-          <stop offset="100%" stop-color="#E2D2B0" />
+          <stop offset="0%" stop-color="#EAE6DC" />
+          <stop offset="100%" stop-color="#DFD8C9" />
         </linearGradient>
         <filter id="mapGlow">
-          <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1C1917" flood-opacity="0.3"/>
+          <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#2B2B2B" flood-opacity="0.3"/>
         </filter>
       </defs>
 
@@ -223,23 +223,23 @@ function buildJourneyMap() {
       <text x="30" y="115" font-size="10" fill="#2E6278" font-weight="700">${lang === 'zh' ? '尼羅河三角洲 / 埃及' : 'Nile Delta / Egypt'}</text>
 
       <!-- Mountain Silhouettes for Mt Sinai & Nebo -->
-      <path d="M 260,415 L 280,390 L 300,415 Z" fill="#C5B18D" stroke="#A99572" stroke-width="1.5"/>
-      <path d="M 445,108 L 460,90 L 475,108 Z" fill="#C5B18D" stroke="#A99572" stroke-width="1.5"/>
+      <path d="M 260,415 L 280,390 L 300,415 Z" fill="#C8A96A" stroke="#B8995A" stroke-width="1.5"/>
+      <path d="M 445,108 L 460,90 L 475,108 Z" fill="#C8A96A" stroke="#B8995A" stroke-width="1.5"/>
 
       <!-- Exodus Path connecting all stations -->
       <path id="exodusRoutePath"
         d="M 95,125 L 140,145 L 180,180 L 200,220 L 215,255 L 235,300 L 255,345 L 280,400 L 320,350 L 350,250 L 400,220 L 420,160 L 440,120 L 460,100 L 440,80"
-        fill="none" stroke="#DC2626" stroke-width="3" stroke-dasharray="6,4" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+        fill="none" stroke="#934B43" stroke-width="3" stroke-dasharray="6,4" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
 
       <!-- Station Markers -->
       <g id="stationMarkersGroup">
         ${STATIONS.map((st, i) => `
           <g class="map-station-node" data-id="${st.id}" data-idx="${i}" style="cursor:pointer">
             <circle cx="${st.x}" cy="${st.y}" r="8" fill="white" filter="url(#mapGlow)"/>
-            <circle cx="${st.x}" cy="${st.y}" r="5.5" fill="${st.id === 'st-sinai' ? '#DC2626' : st.id === 'st-moab' ? '#EA580C' : '#1C1917'}"/>
+            <circle cx="${st.x}" cy="${st.y}" r="5.5" fill="${st.id === 'st-sinai' ? '#934B43' : st.id === 'st-moab' ? '#526851' : '#2B2B2B'}"/>
             <circle cx="${st.x}" cy="${st.y}" r="2" fill="white"/>
-            <text x="${st.x + 9}" y="${st.y + 3.5}" font-size="8.5" font-weight="700" fill="#1C1917" font-family="Noto Sans TC, Poppins, sans-serif"
-                  paint-order="stroke" stroke="#F2EDE4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <text x="${st.x + 9}" y="${st.y + 3.5}" font-size="8.5" font-weight="700" fill="#2B2B2B" font-family="Noto Sans TC, Poppins, sans-serif"
+                  paint-order="stroke" stroke="#F5F3EE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               ${i+1}. ${lang === 'zh' ? st.name_zh.split(' ')[0] : st.name_en.split(' ')[0]}
             </text>
           </g>
@@ -274,7 +274,7 @@ function selectStation(idx) {
     const circles = node.querySelectorAll('circle');
     if (i === idx) {
       circles[0].setAttribute('r', '11');
-      circles[0].setAttribute('stroke', '#DC2626');
+      circles[0].setAttribute('stroke', '#934B43');
       circles[0].setAttribute('stroke-width', '2');
     } else {
       circles[0].setAttribute('r', '8');

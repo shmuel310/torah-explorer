@@ -22,10 +22,10 @@ function buildPathway() {
   const itemsPerLane = Math.ceil(COMMANDMENTS.length / numLanes);
 
   let svg = `
-    <svg viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" style="background:#FAF8F5;border-radius:10px;">
+    <svg viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" style="background:#F5F3EE;border-radius:10px;">
       <defs>
         <filter id="nodeGlow">
-          <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#1C1917" flood-opacity="0.2"/>
+          <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#2B2B2B" flood-opacity="0.2"/>
         </filter>
       </defs>
   `;
@@ -37,7 +37,7 @@ function buildPathway() {
     const endId = Math.min(COMMANDMENTS.length, (l + 1) * itemsPerLane);
 
     svg += `
-      <rect x="${margin.left}" y="${y + 5}" width="${plotWidth}" height="${laneHeight - 10}" rx="6" fill="${l % 2 === 0 ? '#F3EFEA' : '#ECE6DC'}" opacity="0.5"/>
+      <rect x="${margin.left}" y="${y + 5}" width="${plotWidth}" height="${laneHeight - 10}" rx="6" fill="${l % 2 === 0 ? '#EAE6DC' : '#DFD9CD'}" opacity="0.55"/>
       <text x="${margin.left + 12}" y="${y + 20}" font-size="9" font-weight="700" fill="#78716C" letter-spacing="0.05em">
         SECTION ${l + 1} · #${startId} – #${endId}
       </text>

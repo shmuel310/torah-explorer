@@ -4,11 +4,11 @@
 
 // ── Book metadata ──
 const BOOKS = {
-  Gen: { abbr:'創', abbr_en:'Gen', main:'#7C3AED', light:'#EDE9FE', name_en:'Genesis',      name_zh:'創世記' },
-  Exo: { abbr:'出', abbr_en:'Exo', main:'#DB2777', light:'#FCE7F3', name_en:'Exodus',       name_zh:'出埃及記' },
-  Lev: { abbr:'利', abbr_en:'Lev', main:'#2563EB', light:'#DBEAFE', name_en:'Leviticus',    name_zh:'利未記' },
-  Num: { abbr:'民', abbr_en:'Num', main:'#16A34A', light:'#DCFCE7', name_en:'Numbers',      name_zh:'民數記' },
-  Deu: { abbr:'申', abbr_en:'Deu', main:'#EA580C', light:'#FFF7ED', name_en:'Deuteronomy',  name_zh:'申命記' }
+  Gen: { abbr:'創', abbr_en:'Gen', main:'#4A5D73', light:'#E8ECF1', name_en:'Genesis',      name_zh:'創世記' },
+  Exo: { abbr:'出', abbr_en:'Exo', main:'#934B43', light:'#F7ECEB', name_en:'Exodus',       name_zh:'出埃及記' },
+  Lev: { abbr:'利', abbr_en:'Lev', main:'#C8A96A', light:'#FAF4E8', name_en:'Leviticus',    name_zh:'利未記' },
+  Num: { abbr:'民', abbr_en:'Num', main:'#D6A84C', light:'#FAF3E5', name_en:'Numbers',      name_zh:'民數記' },
+  Deu: { abbr:'申', abbr_en:'Deu', main:'#526851', light:'#EEF2EE', name_en:'Deuteronomy',  name_zh:'申命記' }
 };
 const BOOK_KEYS = ['Gen','Exo','Lev','Num','Deu'];
 
@@ -65,7 +65,7 @@ function openCmdModal(cmdId) {
   // Header badges
   const idBadge = document.getElementById('modalIdBadge');
   idBadge.textContent = `#${cmd.id}`;
-  idBadge.style.background = '#1C1917';
+  idBadge.style.background = '#2B2B2B';
   idBadge.style.color = 'white';
 
   const typeBadge = document.getElementById('modalTypeBadge');
@@ -159,7 +159,6 @@ function showView(name) {
   if (name === 'radial' && window.renderTorahWheel) window.renderTorahWheel();
   if (name === 'category-grid' && window.renderCategoryGrid) window.renderCategoryGrid();
   if (name === 'pathway' && window.renderPathway) window.renderPathway();
-  if (name === 'voices' && window.renderVoices) window.renderVoices();
   if (name === 'streams' && window.renderStreams) window.renderStreams();
   if (name === 'reading' && window.renderReadingPlan) window.renderReadingPlan();
 }

@@ -30,7 +30,6 @@
         <li><strong data-en="Torah Wheel" data-zh="妥拉之輪"></strong><span data-en="Circular polar visualization of 613 commandments" data-zh="極坐標環形輪盤，按 14 分類或五卷書切分 613 條誡命扇區"></span></li>
         <li><strong data-en="Category Grid" data-zh="類別矩陣"></strong><span data-en="14 legal categories × 5 books dot matrix" data-zh="14 大法典領域 × 摩西五卷書的氣泡密度矩陣"></span></li>
         <li><strong data-en="Law Pathway" data-zh="律法路徑"></strong><span data-en="The sequential flow of commandments from Sinai to Moab" data-zh="從西奈山盟約到摩押平原重申的律法頒布動線"></span></li>
-        <li><strong data-en="Book Voices" data-zh="五書聲部"></strong><span data-en="5 horizontal staves showing each book's commandment density" data-zh="宛如五線譜音樂交響，展現五卷書中律法的節奏分佈"></span></li>
         <li><strong data-en="Torah Streams" data-zh="律法之流"></strong><span data-en="Flowing streams reveal each book's activity across themes" data-zh="流動圖呈現各卷書在不同法典主題中的所佔份額"></span></li>
         <li><strong data-en="Study Plan" data-zh="讀經計劃"></strong><span data-en="54-week Parashat HaShavua reading cycle with progress tracking" data-zh="猶太曆 54 週妥拉讀經循環，含進度儲存與列印版面"></span></li>
         <li><strong data-en="Statistics" data-zh="統計分析"></strong><span data-en="Comprehensive statistical breakdowns and patterns" data-zh="卷書分佈、積極/消極比例與獨特誡命統計圖表"></span></li>
@@ -77,7 +76,6 @@
     <button class="vtab" data-view="radial" data-en="Torah Wheel" data-zh="妥拉之輪" data-desc-en="613 commandments arranged in a circular polar wheel" data-desc-zh="613 條誡命環形輪盤，按分類或卷書極坐標視覺化">妥拉之輪</button>
     <button class="vtab" data-view="category-grid" data-en="Category Grid" data-zh="類別矩陣" data-desc-en="14 legal categories × 5 books bubble density matrix" data-desc-zh="14 大法典主題 × 摩西五卷書的氣泡密度矩陣">類別矩陣</button>
     <button class="vtab" data-view="pathway" data-en="Law Pathway" data-zh="律法路徑" data-desc-en="Sequential flow of commandments from Sinai to Moab" data-desc-zh="從西奈山到摩押平原的律法頒布動線路徑圖">律法路徑</button>
-    <button class="vtab" data-view="voices" data-en="Book Voices" data-zh="五書聲部" data-desc-en="Five horizontal staves showing each book's commandment distribution" data-desc-zh="宛如五線譜音樂交響，展現五卷書中律法的節奏分佈">五書聲部</button>
     <button class="vtab" data-view="streams" data-en="Torah Streams" data-zh="律法之流" data-desc-en="Flowing streams reveal each book's activity across categories" data-desc-zh="流動圖呈現各卷書在不同法典主題中的所佔份額">律法之流</button>
     <button class="vtab" data-view="reading" data-en="Study Plan" data-zh="讀經計劃" data-desc-en="54-week Parashat HaShavua reading cycle with progress tracking" data-desc-zh="54 週妥拉讀經循環，含進度追蹤與列印版面">讀經計劃</button>
     <button class="vtab" data-view="stats" data-en="Statistics" data-zh="統計分析" data-desc-en="Statistical breakdowns, proportions, and patterns" data-desc-zh="覆蓋率分佈、積極/消極比例與統計模式圖表">統計分析</button>
@@ -94,7 +92,6 @@
     <option value="radial" data-en="Torah Wheel" data-zh="妥拉之輪">妥拉之輪</option>
     <option value="category-grid" data-en="Category Grid" data-zh="類別矩陣">類別矩陣</option>
     <option value="pathway" data-en="Law Pathway" data-zh="律法路徑">律法路徑</option>
-    <option value="voices" data-en="Book Voices" data-zh="五書聲部">五書聲部</option>
     <option value="streams" data-en="Torah Streams" data-zh="律法之流">律法之流</option>
     <option value="reading" data-en="Study Plan (54 Weeks)" data-zh="讀經計劃（54週）">讀經計劃（54週）</option>
     <option value="stats" data-en="Statistics" data-zh="統計分析">統計分析</option>
@@ -237,15 +234,7 @@
   </div>
 </div>
 
-<!-- ════ 8. BOOK VOICES VIEW ════ -->
-<div class="view" id="view-voices">
-  <div class="voices-container">
-    <div class="voices-intro" data-en="Torah Voices: 5 Books Plotted as a Five-Line Musical Score" data-zh="五書聲部：宛如五線譜樂譜，五條平行譜線展示五卷書中 613 條誡命的律動節奏與音符密度。"></div>
-    <div id="voicesWrap"></div>
-  </div>
-</div>
-
-<!-- ════ 9. STREAMS VIEW ════ -->
+<!-- ════ 8. STREAMS VIEW ════ -->
 <div class="view" id="view-streams">
   <div class="streams-container">
     <div class="streams-intro" data-en="Torah Streams: Volume & Activity of Each Book Flowing Across Categories" data-zh="律法之流：流動圖視覺化展現五卷書在 14 大法典主題中的份額交織與分佈寬度。"></div>
@@ -343,7 +332,6 @@
 <script src="js/views/radial.js"></script>
 <script src="js/views/category-grid.js"></script>
 <script src="js/views/pathway.js"></script>
-<script src="js/views/voices.js"></script>
 <script src="js/views/streams.js"></script>
 
 </body>

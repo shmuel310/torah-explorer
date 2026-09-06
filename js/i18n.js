@@ -42,7 +42,6 @@ const I18N = (() => {
     if (window.renderTorahWheel) window.renderTorahWheel();
     if (window.renderCategoryGrid) window.renderCategoryGrid();
     if (window.renderPathway) window.renderPathway();
-    if (window.renderVoices) window.renderVoices();
     if (window.renderStreams) window.renderStreams();
   }
 
