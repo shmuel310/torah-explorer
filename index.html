@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>摩西五經互動資訊 — Torah Interactive Reference · 613 Commandments</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@400;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Frank+Ruhl+Libre:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="eyebrow" data-en="Interactive Reference" data-zh="互動參考工具"></div>
+  <h1>
+    <span data-en="The Five Books of Moses" data-zh="摩西五經"></span><br>
+    <em data-en="Torah Interactive Reference · 613 Commandments" data-zh="互動資訊 · 613 條誡命全覽"></em>
+  </h1>
+  <p data-en="An interactive reference tool mapping the 613 commandments of Maimonides across Genesis, Exodus, Leviticus, Numbers, and Deuteronomy — with narrative milestones, wilderness journeys, and 11 ways to explore them."
+     data-zh="將邁蒙尼德《誡命書》的 613 條誡命對應到創世記、出埃及記、利未記、民數記和申命記——涵蓋歷史敘事、出埃及旅程，並提供 11 種全方位探索視角。"></p>
+  <details class="about-toggle">
+    <summary data-en="About this tool ↓" data-zh="關於本工具 ↓"></summary>
+    <div class="about-body">
+      <p data-en="This tool maps 613 commandments (Taryag Mitzvot) as enumerated by Maimonides (Rambam) in Sefer HaMitzvot and Mishneh Torah, alongside ~150 key narrative events from the Pentateuch. Scripture is presented with Hebrew original, English, and Traditional Chinese."
+         data-zh="本工具完整收錄邁蒙尼德（Rambam）在《誡命書》(Sefer HaMitzvot) 及《密西拿妥拉》(Mishneh Torah) 中列舉的 613 條誡命（248 條積極誡命 + 365 條消極禁令），並整合摩西五經中約 150 個關鍵歷史敘事。經文包含希伯來原文、英文與繁體中文（和合本）。"></p>
+      <ul>
+        <li><strong data-en="613 Commandments" data-zh="613 誡命"></strong><span data-en="Browse all 613 commandments; filter by book, category, or polarity" data-zh="瀏覽全部 613 條誡命；支援按卷書、法典分類、積極/消極及即時檢索"></span></li>
+        <li><strong data-en="Narratives" data-zh="歷史敘事"></strong><span data-en="~150 key events from Creation to Moses' death" data-zh="從創世天地到摩西之死約 150 個關鍵歷史事件時空線"></span></li>
+        <li><strong data-en="Five Books Matrix" data-zh="五書矩陣"></strong><span data-en="See which books contain each commandment, side by side" data-zh="並排比對每條誡命出現在五卷書中的重述與分佈"></span></li>
+        <li><strong data-en="Journey Map" data-zh="旅程地圖"></strong><span data-en="Interactive map of the Exodus and 40-year wilderness route" data-zh="出埃及與曠野 40 年流浪路線互動向量地圖與各站法令"></span></li>
+        <li><strong data-en="Torah Wheel" data-zh="妥拉之輪"></strong><span data-en="Circular polar visualization of 613 commandments" data-zh="極坐標環形輪盤，按 14 分類或五卷書切分 613 條誡命扇區"></span></li>
+        <li><strong data-en="Category Grid" data-zh="類別矩陣"></strong><span data-en="14 legal categories × 5 books dot matrix" data-zh="14 大法典領域 × 摩西五卷書的氣泡密度矩陣"></span></li>
+        <li><strong data-en="Law Pathway" data-zh="律法路徑"></strong><span data-en="The sequential flow of commandments from Sinai to Moab" data-zh="從西奈山盟約到摩押平原重申的律法頒布動線"></span></li>
+        <li><strong data-en="Book Voices" data-zh="五書聲部"></strong><span data-en="5 horizontal staves showing each book's commandment density" data-zh="宛如五線譜音樂交響，展現五卷書中律法的節奏分佈"></span></li>
+        <li><strong data-en="Torah Streams" data-zh="律法之流"></strong><span data-en="Flowing streams reveal each book's activity across themes" data-zh="流動圖呈現各卷書在不同法典主題中的所佔份額"></span></li>
+        <li><strong data-en="Study Plan" data-zh="讀經計劃"></strong><span data-en="54-week Parashat HaShavua reading cycle with progress tracking" data-zh="猶太曆 54 週妥拉讀經循環，含進度儲存與列印版面"></span></li>
+        <li><strong data-en="Statistics" data-zh="統計分析"></strong><span data-en="Comprehensive statistical breakdowns and patterns" data-zh="卷書分佈、積極/消極比例與獨特誡命統計圖表"></span></li>
+      </ul>
+      <p class="about-source" data-en="Based on Maimonides' Sefer HaMitzvot & Mishneh Torah · Inspired by Darren Rowse's Gospel Harmony"
+         data-zh="依據邁蒙尼德《誡命書》與《密西拿妥拉》· 參照 Darren Rowse 福音合參互動設計哲學"></p>
+    </div>
+  </details>
+</header>
+
+<!-- ── LEGEND ── -->
+<div class="legend-strip">
+  <div class="legend-inner">
+    <div class="legend-item"><div class="lbadge" style="background:var(--gen)">創</div><span data-en="Genesis" data-zh="創世記"></span></div>
+    <div class="legend-item"><div class="lbadge" style="background:var(--exo)">出</div><span data-en="Exodus" data-zh="出埃及記"></span></div>
+    <div class="legend-item"><div class="lbadge" style="background:var(--lev)">利</div><span data-en="Leviticus" data-zh="利未記"></span></div>
+    <div class="legend-item"><div class="lbadge" style="background:var(--num)">民</div><span data-en="Numbers" data-zh="民數記"></span></div>
+    <div class="legend-item"><div class="lbadge" style="background:var(--deu)">申</div><span data-en="Deuteronomy" data-zh="申命記"></span></div>
+    <div class="legend-item" style="margin-left:12px"><div class="ldot" style="background:#B91C1C"></div><span data-en="All 5 books" data-zh="五卷皆有"></span></div>
+    <div class="legend-item"><div class="ldot" style="background:#EA580C"></div><span data-en="3–4 books" data-zh="3–4 卷"></span></div>
+    <div class="legend-item"><div class="ldot" style="background:#EAB308"></div><span data-en="2 books" data-zh="2 卷"></span></div>
+  </div>
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="zh">中文</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+</div>
+
+<!-- ── COVERAGE GRID ── -->
+<div class="coverage-strip">
+  <div class="coverage-inner">
+    <div class="coverage-label" data-en="All 613 commandments — colour shows book origin · click to view detail" data-zh="全部 613 條誡命 — 色彩標記主要卷書出處 · 點擊查看經文與詳情"></div>
+    <div class="coverage-grid" id="covGrid"></div>
+  </div>
+</div>
+
+<!-- ── VIEW TABS ── -->
+<div class="tab-area">
+  <div class="view-tabs">
+    <button class="vtab active" data-view="cmd-timeline" data-en="613 Mitzvot" data-zh="613 誡命" data-desc-en="Browse all 613 commandments; filter by book, category, or search" data-desc-zh="瀏覽所有 613 條誡命；按卷書、分類、積極/消極或關鍵字檢索">613 誡命</button>
+    <button class="vtab" data-view="nar-timeline" data-en="Narratives" data-zh="歷史敘事" data-desc-en="~150 key narrative milestones from Creation to Moses' death" data-desc-zh="從創世到摩西之死約 150 個關鍵歷史敘事事件">歷史敘事</button>
+    <button class="vtab" data-view="matrix" data-en="Five Books Matrix" data-zh="五書矩陣" data-desc-en="Side-by-side comparison of commandments across all five books" data-desc-zh="查看每條誡命在五卷書中的分佈對照矩陣">五書矩陣</button>
+    <button class="vtab" data-view="map" data-en="Journey Map" data-zh="旅程地圖" data-desc-en="Explore the Exodus & Wilderness journey with interactive stations" data-desc-zh="出埃及與曠野 40 年流浪路線互動向量地圖與各站律法">旅程地圖</button>
+    <button class="vtab" data-view="radial" data-en="Torah Wheel" data-zh="妥拉之輪" data-desc-en="613 commandments arranged in a circular polar wheel" data-desc-zh="613 條誡命環形輪盤，按分類或卷書極坐標視覺化">妥拉之輪</button>
+    <button class="vtab" data-view="category-grid" data-en="Category Grid" data-zh="類別矩陣" data-desc-en="14 legal categories × 5 books bubble density matrix" data-desc-zh="14 大法典主題 × 摩西五卷書的氣泡密度矩陣">類別矩陣</button>
+    <button class="vtab" data-view="pathway" data-en="Law Pathway" data-zh="律法路徑" data-desc-en="Sequential flow of commandments from Sinai to Moab" data-desc-zh="從西奈山到摩押平原的律法頒布動線路徑圖">律法路徑</button>
+    <button class="vtab" data-view="voices" data-en="Book Voices" data-zh="五書聲部" data-desc-en="Five horizontal staves showing each book's commandment distribution" data-desc-zh="宛如五線譜音樂交響，展現五卷書中律法的節奏分佈">五書聲部</button>
+    <button class="vtab" data-view="streams" data-en="Torah Streams" data-zh="律法之流" data-desc-en="Flowing streams reveal each book's activity across categories" data-desc-zh="流動圖呈現各卷書在不同法典主題中的所佔份額">律法之流</button>
+    <button class="vtab" data-view="reading" data-en="Study Plan" data-zh="讀經計劃" data-desc-en="54-week Parashat HaShavua reading cycle with progress tracking" data-desc-zh="54 週妥拉讀經循環，含進度追蹤與列印版面">讀經計劃</button>
+    <button class="vtab" data-view="stats" data-en="Statistics" data-zh="統計分析" data-desc-en="Statistical breakdowns, proportions, and patterns" data-desc-zh="覆蓋率分佈、積極/消極比例與統計模式圖表">統計分析</button>
+  </div>
+  <div id="tab-hint"></div>
+</div>
+
+<div class="view-select-wrap">
+  <select class="view-select" id="viewSelect">
+    <option value="cmd-timeline" data-en="613 Mitzvot" data-zh="613 誡命">613 誡命</option>
+    <option value="nar-timeline" data-en="Narratives" data-zh="歷史敘事">歷史敘事</option>
+    <option value="matrix" data-en="Five Books Matrix" data-zh="五書矩陣">五書矩陣</option>
+    <option value="map" data-en="Journey Map" data-zh="旅程地圖">旅程地圖</option>
+    <option value="radial" data-en="Torah Wheel" data-zh="妥拉之輪">妥拉之輪</option>
+    <option value="category-grid" data-en="Category Grid" data-zh="類別矩陣">類別矩陣</option>
+    <option value="pathway" data-en="Law Pathway" data-zh="律法路徑">律法路徑</option>
+    <option value="voices" data-en="Book Voices" data-zh="五書聲部">五書聲部</option>
+    <option value="streams" data-en="Torah Streams" data-zh="律法之流">律法之流</option>
+    <option value="reading" data-en="Study Plan (54 Weeks)" data-zh="讀經計劃（54週）">讀經計劃（54週）</option>
+    <option value="stats" data-en="Statistics" data-zh="統計分析">統計分析</option>
+  </select>
+</div>
+
+<!-- ════ 1. COMMANDMENTS TIMELINE ════ -->
+<div class="view active" id="view-cmd-timeline">
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <span class="flabel" data-en="Book" data-zh="卷書"></span>
+      <div class="filters" id="cmdBookFilters">
+        <button class="fbtn fa" data-f="all" data-en="All" data-zh="全部"></button>
+        <button class="fbtn f-Gen" data-f="Gen" data-en="Genesis" data-zh="創世記"></button>
+        <button class="fbtn f-Exo" data-f="Exo" data-en="Exodus" data-zh="出埃及記"></button>
+        <button class="fbtn f-Lev" data-f="Lev" data-en="Leviticus" data-zh="利未記"></button>
+        <button class="fbtn f-Num" data-f="Num" data-en="Numbers" data-zh="民數記"></button>
+        <button class="fbtn f-Deu" data-f="Deu" data-en="Deuteronomy" data-zh="申命記"></button>
+      </div>
+      <div class="stat-pills">
+        <span class="spill gen" id="sGen"></span>
+        <span class="spill exo" id="sExo"></span>
+        <span class="spill lev" id="sLev"></span>
+        <span class="spill num" id="sNum"></span>
+        <span class="spill deu" id="sDeu"></span>
+      </div>
+    </div>
+    <div class="stats-inner" style="margin-top:8px">
+      <span class="flabel" data-en="Type" data-zh="性質"></span>
+      <div class="type-filters" id="typeFilters">
+        <button class="tfbtn tfa" data-type="all" data-en="All types" data-zh="全部性質"></button>
+        <button class="tfbtn" data-type="positive"><span class="type-dot" style="background:#16A34A"></span><span data-en="Positive (248)" data-zh="積極當行 (248)"></span></button>
+        <button class="tfbtn" data-type="negative"><span class="type-dot" style="background:#DC2626"></span><span data-en="Negative (365)" data-zh="消極禁戒 (365)"></span></button>
+      </div>
+      <div class="search-wrap">
+        <input type="text" id="cmdSearchInput" class="search-input" placeholder="搜尋誡命內容、經文或編號...">
+      </div>
+      <div class="order-wrap">
+        <select id="cmdSortSelect" class="cmd-sort-select">
+          <option value="category" data-en="By 14 Legal Categories" data-zh="按 14 法典分類">按 14 法典分類</option>
+          <option value="scripture" data-en="By Scripture Order (Gen → Deu)" data-zh="按五書經文順序（創→申）">按五書經文順序（創→申）</option>
+          <option value="polarity" data-en="By Polarity (Positive 248 / Negative 365)" data-zh="按積極 (248) / 消極 (365)">按積極 (248) / 消極 (365)</option>
+        </select>
+      </div>
+      <div class="progress-wrap" id="cmdProgWrap"></div>
+    </div>
+  </div>
+  <main id="cmdMain"></main>
+</div>
+
+<!-- ════ 2. NARRATIVES TIMELINE ════ -->
+<div class="view" id="view-nar-timeline">
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <span class="flabel" data-en="Book" data-zh="卷書"></span>
+      <div class="filters" id="narFilters">
+        <button class="fbtn fa" data-f="all" data-en="All" data-zh="全部"></button>
+        <button class="fbtn f-Gen" data-f="Gen" data-en="Genesis" data-zh="創世記"></button>
+        <button class="fbtn f-Exo" data-f="Exo" data-en="Exodus" data-zh="出埃及記"></button>
+        <button class="fbtn f-Lev" data-f="Lev" data-en="Leviticus" data-zh="利未記"></button>
+        <button class="fbtn f-Num" data-f="Num" data-en="Numbers" data-zh="民數記"></button>
+        <button class="fbtn f-Deu" data-f="Deu" data-en="Deuteronomy" data-zh="申命記"></button>
+      </div>
+      <div class="search-wrap" style="margin-left:auto">
+        <input type="text" id="narSearchInput" class="search-input" placeholder="搜尋歷史事件、人物或經文...">
+      </div>
+    </div>
+  </div>
+  <main id="narMain"></main>
+</div>
+
+<!-- ════ 3. MATRIX VIEW ════ -->
+<div class="view" id="view-matrix">
+  <div class="matrix-intro" style="margin-top:24px" data-en="Compact view of all 613 commandments × 5 books. Coloured cell = this book contains this commandment." data-zh="613 條誡命 × 5 卷書對照矩陣。有色格子 = 該卷書包含此誡命的出處經文。點擊任一行展開詳情。"></div>
+  <div style="overflow-x:auto; padding:0 16px 80px; max-width:960px; margin:0 auto;">
+    <table class="matrix-table" id="matrixTable">
+      <thead>
+        <tr>
+          <th style="width:36px">#</th>
+          <th data-en="Commandment" data-zh="誡命名稱與經文"></th>
+          <th class="gc" style="background:var(--gen-light);color:var(--gen)" data-en="Gen" data-zh="創">創</th>
+          <th class="gc" style="background:var(--exo-light);color:var(--exo)" data-en="Exo" data-zh="出">出</th>
+          <th class="gc" style="background:var(--lev-light);color:var(--lev)" data-en="Lev" data-zh="利">利</th>
+          <th class="gc" style="background:var(--num-light);color:var(--num)" data-en="Num" data-zh="民">民</th>
+          <th class="gc" style="background:var(--deu-light);color:var(--deu)" data-en="Deu" data-zh="申">申</th>
+        </tr>
+      </thead>
+      <tbody id="matrixBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ════ 4. MAP VIEW (Exodus & Wilderness Journey) ════ -->
+<div class="view" id="view-map">
+  <div class="map-layout">
+    <div class="map-left-col">
+      <div class="map-title-bar">
+        <h3 data-en="The Exodus Journey & Wilderness Route" data-zh="出埃及與曠野 40 年流浪旅程路線"></h3>
+        <p data-en="Click any waypoint to explore historical events and the laws given at each station" data-zh="點擊地圖上的站點，查看歷史事件與該處頒布之律法"></p>
+      </div>
+      <div id="mapSvgContainer" class="map-svg-wrap"></div>
+      <div class="map-legend-row" id="mapLegendRow"></div>
+    </div>
+    <div class="map-sidebar" id="mapSidebar">
+      <div class="station-card" id="stationCard">
+        <div class="station-placeholder" data-en="Click any location marker on the map to see its details" data-zh="請點擊地圖上的站點圖示以查看歷史記事與律法"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ 5. RADIAL VIEW (Torah Wheel) ════ -->
+<div class="view" id="view-radial">
+  <div class="rad-container">
+    <div class="rad-toolbar">
+      <div class="rad-toggle" id="radToggleGroup">
+        <button class="rad-tog active" data-mode="category" data-en="Group by 14 Categories" data-zh="按 14 大法典主題分類"></button>
+        <button class="rad-tog" data-mode="book" data-en="Group by 5 Books" data-zh="按摩西五卷書分類"></button>
+      </div>
+    </div>
+    <div id="radialSvgWrap" class="rad-svg-wrap"></div>
+    <div id="radialInfoBox" class="rad-info"></div>
+  </div>
+</div>
+
+<!-- ════ 6. CATEGORY GRID VIEW ════ -->
+<div class="view" id="view-category-grid">
+  <div class="cg-container">
+    <div class="cg-intro" data-en="Dot Matrix: 14 Legal Categories × 5 Books of the Torah" data-zh="點陣矩陣：14 大法典領域 × 摩西五卷書的誡命密度。圓圈大小與數字代表該分類在此卷書中的誡命數量。點擊查看對應清單。"></div>
+    <div id="categoryGridWrap"></div>
+    <div id="categoryGridDetail" class="cg-detail-panel"></div>
+  </div>
+</div>
+
+<!-- ════ 7. PATHWAY VIEW ════ -->
+<div class="view" id="view-pathway">
+  <div class="pw-container">
+    <div class="pw-intro" data-en="Law Pathway: Sequential Progression of 613 Commandments Across Categories" data-zh="律法路徑圖：613 條誡命在 14 個法典範疇間的連動分佈與流向軌跡。"></div>
+    <div id="pathwayWrap"></div>
+  </div>
+</div>
+
+<!-- ════ 8. BOOK VOICES VIEW ════ -->
+<div class="view" id="view-voices">
+  <div class="voices-container">
+    <div class="voices-intro" data-en="Torah Voices: 5 Books Plotted as a Five-Line Musical Score" data-zh="五書聲部：宛如五線譜樂譜，五條平行譜線展示五卷書中 613 條誡命的律動節奏與音符密度。"></div>
+    <div id="voicesWrap"></div>
+  </div>
+</div>
+
+<!-- ════ 9. STREAMS VIEW ════ -->
+<div class="view" id="view-streams">
+  <div class="streams-container">
+    <div class="streams-intro" data-en="Torah Streams: Volume & Activity of Each Book Flowing Across Categories" data-zh="律法之流：流動圖視覺化展現五卷書在 14 大法典主題中的份額交織與分佈寬度。"></div>
+    <div id="streamsWrap"></div>
+  </div>
+</div>
+
+<!-- ════ 10. READING PLAN VIEW (54 Parashot) ════ -->
+<div class="view" id="view-reading">
+  <div class="rp-container">
+    <div class="rp-header">
+      <div>
+        <div class="rp-title" data-en="54-Week Torah Study Plan (Parashat HaShavua)" data-zh="54 週妥拉每週讀經計劃 (Parashat HaShavua)"></div>
+        <div class="rp-subtitle" data-en="Traditional weekly reading cycle mapping narrative, scripture ranges, and the 613 commandments. Check items to track your annual study progress." data-zh="猶太傳統每週讀經循環，完整對應經文範圍與涵蓋之誡命。點選核取方塊可儲存閱讀進度。"></div>
+      </div>
+      <button class="btn-print" onclick="window.print()" data-en="Print Reading Plan" data-zh="列印讀經卡"></button>
+    </div>
+    <div class="rp-prog-wrap">
+      <div class="rp-prog-label" id="rpProgLabel">0 / 54 篇已研讀 (0%)</div>
+      <div class="rp-prog-bar"><div class="rp-prog-fill" id="rpProgFill" style="width:0%"></div></div>
+    </div>
+    <div id="readingList" class="rp-list"></div>
+  </div>
+</div>
+
+<!-- ════ 11. STATS VIEW ════ -->
+<div class="view" id="view-stats">
+  <div id="statsContent"></div>
+</div>
+
+<!-- ════ COMMANDMENT DETAIL MODAL ════ -->
+<div id="cmdModal" class="modal-backdrop" style="display:none">
+  <div class="modal-card">
+    <button class="modal-close" id="modalCloseBtn" aria-label="Close">✕</button>
+    <div class="modal-header">
+      <div class="modal-badge-row">
+        <span id="modalIdBadge" class="m-badge"></span>
+        <span id="modalTypeBadge" class="m-badge"></span>
+        <span id="modalBookBadge" class="m-badge"></span>
+        <span id="modalCategoryBadge" class="m-badge"></span>
+      </div>
+      <h2 id="modalTitle" class="modal-title"></h2>
+      <div id="modalRef" class="modal-ref"></div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-sec-title" data-en="Chinese Scripture (CUV 和合本)" data-zh="中文經文 (和合本)"></div>
+        <div id="modalChinese" class="modal-scripture-text modal-chinese"></div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-sec-title" data-en="English Translation (JPS / WEB)" data-zh="英文經文 (JPS / WEB)"></div>
+        <div id="modalEnglish" class="modal-scripture-text"></div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-sec-title" data-en="Hebrew Scripture (WLC Masoretic)" data-zh="希伯來文原文 (WLC 馬所拉文本)"></div>
+        <div id="modalHebrew" class="modal-hebrew" dir="rtl"></div>
+      </div>
+      <div class="modal-meta-grid">
+        <div class="meta-item">
+          <div class="meta-lbl" data-en="Weekly Portion" data-zh="每週讀經篇章"></div>
+          <div id="modalParashah" class="meta-val"></div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-lbl" data-en="Mishneh Torah Category" data-zh="法典子類別"></div>
+          <div id="modalSubcategory" class="meta-val"></div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-lbl" data-en="Sefer HaChinuch #" data-zh="教育之書編號"></div>
+          <div id="modalChinuch" class="meta-val"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span data-en="Based on Maimonides' Sefer HaMitzvot & Mishneh Torah · Scripture: 和合本 CUV + WEB · Data: Sefaria.org (CC-BY-SA)"
+        data-zh="依據邁蒙尼德《誡命書》與《密西拿妥拉》· 經文：和合本 + WEB · 開源資料：Sefaria.org (CC-BY-SA)"></span>
+</footer>
+
+<!-- DATA -->
+<script src="data/categories.js"></script>
+<script src="data/commandments.js"></script>
+<script src="data/narratives.js"></script>
+<script src="data/parashot.js"></script>
+
+<!-- APP LOGIC & VIEWS -->
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/views/timeline.js"></script>
+<script src="js/views/matrix.js"></script>
+<script src="js/views/stats.js"></script>
+<script src="js/views/reading.js"></script>
+<script src="js/views/map.js"></script>
+<script src="js/views/radial.js"></script>
+<script src="js/views/category-grid.js"></script>
+<script src="js/views/pathway.js"></script>
+<script src="js/views/voices.js"></script>
+<script src="js/views/streams.js"></script>
+
+</body>
+</html>
