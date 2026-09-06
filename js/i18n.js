@@ -41,8 +41,6 @@ const I18N = (() => {
     if (window.renderJourneyMap) window.renderJourneyMap();
     if (window.renderTorahWheel) window.renderTorahWheel();
     if (window.renderCategoryGrid) window.renderCategoryGrid();
-    if (window.renderPathway) window.renderPathway();
-    if (window.renderStreams) window.renderStreams();
   }
 
   function get() { return lang; }

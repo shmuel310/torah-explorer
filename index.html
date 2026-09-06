@@ -29,8 +29,6 @@
         <li><strong data-en="Journey Map" data-zh="旅程地圖"></strong><span data-en="Interactive map of the Exodus and 40-year wilderness route" data-zh="出埃及與曠野 40 年流浪路線互動向量地圖與各站法令"></span></li>
         <li><strong data-en="Torah Wheel" data-zh="妥拉之輪"></strong><span data-en="Circular polar visualization of 613 commandments" data-zh="極坐標環形輪盤，按 14 分類或五卷書切分 613 條誡命扇區"></span></li>
         <li><strong data-en="Category Grid" data-zh="類別矩陣"></strong><span data-en="14 legal categories × 5 books dot matrix" data-zh="14 大法典領域 × 摩西五卷書的氣泡密度矩陣"></span></li>
-        <li><strong data-en="Law Pathway" data-zh="律法路徑"></strong><span data-en="The sequential flow of commandments from Sinai to Moab" data-zh="從西奈山盟約到摩押平原重申的律法頒布動線"></span></li>
-        <li><strong data-en="Torah Streams" data-zh="律法之流"></strong><span data-en="Flowing streams reveal each book's activity across themes" data-zh="流動圖呈現各卷書在不同法典主題中的所佔份額"></span></li>
         <li><strong data-en="Study Plan" data-zh="讀經計劃"></strong><span data-en="54-week Parashat HaShavua reading cycle with progress tracking" data-zh="猶太曆 54 週妥拉讀經循環，含進度儲存與列印版面"></span></li>
         <li><strong data-en="Statistics" data-zh="統計分析"></strong><span data-en="Comprehensive statistical breakdowns and patterns" data-zh="卷書分佈、積極/消極比例與獨特誡命統計圖表"></span></li>
       </ul>
@@ -72,11 +70,9 @@
     <button class="vtab active" data-view="cmd-timeline" data-en="613 Mitzvot" data-zh="613 誡命" data-desc-en="Browse all 613 commandments; filter by book, category, or search" data-desc-zh="瀏覽所有 613 條誡命；按卷書、分類、積極/消極或關鍵字檢索">613 誡命</button>
     <button class="vtab" data-view="nar-timeline" data-en="Narratives" data-zh="歷史敘事" data-desc-en="~150 key narrative milestones from Creation to Moses' death" data-desc-zh="從創世到摩西之死約 150 個關鍵歷史敘事事件">歷史敘事</button>
     <button class="vtab" data-view="matrix" data-en="Five Books Matrix" data-zh="五書矩陣" data-desc-en="Side-by-side comparison of commandments across all five books" data-desc-zh="查看每條誡命在五卷書中的分佈對照矩陣">五書矩陣</button>
-    <button class="vtab" data-view="map" data-en="Journey Map" data-zh="旅程地圖" data-desc-en="Explore the Exodus & Wilderness journey with interactive stations" data-desc-zh="出埃及與曠野 40 年流浪路線互動向量地圖與各站律法">旅程地圖</button>
+    <button class="vtab" data-view="map" data-en="Journey Map" data-zh="旅程地圖" data-desc-en="Interactive map from Abraham in Ur across the Fertile Crescent to the Conquest of Canaan" data-desc-zh="從亞伯拉罕自吾珥啟程、歷經新月沃土、出埃及至征服迦南全景互動地圖">旅程地圖</button>
     <button class="vtab" data-view="radial" data-en="Torah Wheel" data-zh="妥拉之輪" data-desc-en="613 commandments arranged in a circular polar wheel" data-desc-zh="613 條誡命環形輪盤，按分類或卷書極坐標視覺化">妥拉之輪</button>
     <button class="vtab" data-view="category-grid" data-en="Category Grid" data-zh="類別矩陣" data-desc-en="14 legal categories × 5 books bubble density matrix" data-desc-zh="14 大法典主題 × 摩西五卷書的氣泡密度矩陣">類別矩陣</button>
-    <button class="vtab" data-view="pathway" data-en="Law Pathway" data-zh="律法路徑" data-desc-en="Sequential flow of commandments from Sinai to Moab" data-desc-zh="從西奈山到摩押平原的律法頒布動線路徑圖">律法路徑</button>
-    <button class="vtab" data-view="streams" data-en="Torah Streams" data-zh="律法之流" data-desc-en="Flowing streams reveal each book's activity across categories" data-desc-zh="流動圖呈現各卷書在不同法典主題中的所佔份額">律法之流</button>
     <button class="vtab" data-view="reading" data-en="Study Plan" data-zh="讀經計劃" data-desc-en="54-week Parashat HaShavua reading cycle with progress tracking" data-desc-zh="54 週妥拉讀經循環，含進度追蹤與列印版面">讀經計劃</button>
     <button class="vtab" data-view="stats" data-en="Statistics" data-zh="統計分析" data-desc-en="Statistical breakdowns, proportions, and patterns" data-desc-zh="覆蓋率分佈、積極/消極比例與統計模式圖表">統計分析</button>
   </div>
@@ -91,8 +87,6 @@
     <option value="map" data-en="Journey Map" data-zh="旅程地圖">旅程地圖</option>
     <option value="radial" data-en="Torah Wheel" data-zh="妥拉之輪">妥拉之輪</option>
     <option value="category-grid" data-en="Category Grid" data-zh="類別矩陣">類別矩陣</option>
-    <option value="pathway" data-en="Law Pathway" data-zh="律法路徑">律法路徑</option>
-    <option value="streams" data-en="Torah Streams" data-zh="律法之流">律法之流</option>
     <option value="reading" data-en="Study Plan (54 Weeks)" data-zh="讀經計劃（54週）">讀經計劃（54週）</option>
     <option value="stats" data-en="Statistics" data-zh="統計分析">統計分析</option>
   </select>
@@ -184,20 +178,33 @@
   </div>
 </div>
 
-<!-- ════ 4. MAP VIEW (Exodus & Wilderness Journey) ════ -->
+<!-- ════ 4. MAP VIEW (Journey Map: Ur to Canaan) ════ -->
 <div class="view" id="view-map">
   <div class="map-layout">
     <div class="map-left-col">
       <div class="map-title-bar">
-        <h3 data-en="The Exodus Journey & Wilderness Route" data-zh="出埃及與曠野 40 年流浪旅程路線"></h3>
-        <p data-en="Click any waypoint to explore historical events and the laws given at each station" data-zh="點擊地圖上的站點，查看歷史事件與該處頒布之律法"></p>
+        <h3 data-en="Biblical Journey: From Ur of the Chaldees to the Conquest of Canaan" data-zh="救贖歷史旅程地圖：從迦勒底的吾珥到征服迦南">救贖歷史旅程地圖：從迦勒底的吾珥到征服迦南</h3>
+        <p data-en="Interactive Fertile Crescent map: Abraham's calling, Patriarchs, Joseph in Egypt, the Exodus, and Joshua's conquest" data-zh="新月沃土全景互動地圖：亞伯拉罕蒙召、列祖足跡、約瑟下埃及、出埃及曠野四十載與征服應許之地"></p>
       </div>
+
+      <!-- Historical Era Filter Buttons & Viewport Zoom Toggle -->
+      <div class="map-controls-row">
+        <div class="map-era-bar" id="mapEraFilters">
+          <button class="map-era-btn active" data-era="all" data-en="All Routes" data-zh="全景總覽">全景總覽</button>
+          <button class="map-era-btn" data-era="patriarchs" data-en="1. Patriarchs" data-zh="1. 列祖時期">1. 列祖時期</button>
+          <button class="map-era-btn" data-era="joseph" data-en="2. Joseph" data-zh="2. 約瑟生平">2. 約瑟生平</button>
+          <button class="map-era-btn" data-era="exodus" data-en="3. Exodus & Wilderness" data-zh="3. 出埃及與曠野">3. 出埃及與曠野</button>
+          <button class="map-era-btn" data-era="conquest" data-en="4. Conquest" data-zh="4. 征服迦南">4. 征服迦南</button>
+        </div>
+        <button class="map-zoom-toggle" id="mapZoomToggleBtn" data-en="🔍 Focus: Canaan & Sinai" data-zh="🔍 視野：迦南與西奈特寫">🔍 視野：迦南與西奈特寫</button>
+      </div>
+
       <div id="mapSvgContainer" class="map-svg-wrap"></div>
       <div class="map-legend-row" id="mapLegendRow"></div>
     </div>
     <div class="map-sidebar" id="mapSidebar">
       <div class="station-card" id="stationCard">
-        <div class="station-placeholder" data-en="Click any location marker on the map to see its details" data-zh="請點擊地圖上的站點圖示以查看歷史記事與律法"></div>
+        <div class="station-placeholder" data-en="Click any location marker on the map to see its historical events and commandments" data-zh="請點擊地圖上的站點圖示以查看歷史記事與律法"></div>
       </div>
     </div>
   </div>
@@ -206,14 +213,54 @@
 <!-- ════ 5. RADIAL VIEW (Torah Wheel) ════ -->
 <div class="view" id="view-radial">
   <div class="rad-container">
-    <div class="rad-toolbar">
-      <div class="rad-toggle" id="radToggleGroup">
-        <button class="rad-tog active" data-mode="category" data-en="Group by 14 Categories" data-zh="按 14 大法典主題分類"></button>
-        <button class="rad-tog" data-mode="book" data-en="Group by 5 Books" data-zh="按摩西五卷書分類"></button>
+    <div class="rad-header">
+      <div class="rad-title" data-en="Torah Wheel: 613 Commandments Polar Wheel" data-zh="妥拉之輪：613 條誡命環形輪盤">妥拉之輪：613 條誡命環形輪盤</div>
+      <div class="rad-subtitle" data-en="Scroll your mouse wheel over the ring, move cursor around, or use the slider to inspect every commandment with full scripture text." data-zh="在輪盤上滾動滑鼠滾輪、移動光標或滑動控制桿，即可順暢探索 613 條誡命並即時閱讀清晰大字經文節錄。">在輪盤上滾動滑鼠滾輪、移動光標或滑動控制桿，即可順暢探索 613 條誡命並即時閱讀清晰大字經文節錄。</div>
+      <div class="rad-toolbar">
+        <div class="rad-toggle" id="radToggleGroup">
+          <button class="rad-tog active" data-mode="category" data-en="Group by 14 Categories" data-zh="按 14 大法典主題分類"></button>
+          <button class="rad-tog" data-mode="book" data-en="Group by 5 Books" data-zh="按摩西五卷書分類"></button>
+        </div>
       </div>
     </div>
-    <div id="radialSvgWrap" class="rad-svg-wrap"></div>
-    <div id="radialInfoBox" class="rad-info"></div>
+
+    <div class="rad-layout">
+      <!-- Left: Wheel & Hint -->
+      <div class="rad-wheel-col">
+        <div id="radialSvgWrap" class="rad-svg-wrap"></div>
+        <div class="rad-wheel-tip">
+          <span class="rad-tip-icon">✨</span>
+          <span data-en="Scroll mouse wheel over the ring or drag cursor to navigate commandments #1 to #613" data-zh="直接在輪盤上滾動滑鼠滾輪，即可滑順依序瀏覽第 1 至 613 條誡命">直接在輪盤上滾動滑鼠滾輪，即可滑順依序瀏覽第 1 至 613 條誡命</span>
+        </div>
+      </div>
+
+      <!-- Right: Scrubber Controls & Rich Inspector Card -->
+      <div class="rad-inspector-col">
+        <div class="rad-scrub-box">
+          <div class="rad-scrub-top">
+            <button id="radPrevBtn" class="rad-nav-btn" aria-label="Previous Commandment" title="Previous Commandment">◀</button>
+            <div class="rad-scrub-center">
+              <input type="range" id="radScrubber" min="1" max="613" value="1" class="rad-range">
+              <div class="rad-scrub-label">
+                <span id="radCurrentScrubText">#1 / 613</span>
+              </div>
+            </div>
+            <button id="radNextBtn" class="rad-nav-btn" aria-label="Next Commandment" title="Next Commandment">▶</button>
+          </div>
+          <div class="rad-book-pills">
+            <button class="rad-bpill f-Gen" data-book="Gen">創 Gen</button>
+            <button class="rad-bpill f-Exo" data-book="Exo">出 Exo</button>
+            <button class="rad-bpill f-Lev" data-book="Lev">利 Lev</button>
+            <button class="rad-bpill f-Num" data-book="Num">民 Num</button>
+            <button class="rad-bpill f-Deu" data-book="Deu">申 Deu</button>
+          </div>
+        </div>
+
+        <div id="radialInspectorCard" class="rad-inspector-card">
+          <!-- Populated dynamically by radial.js -->
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -226,23 +273,7 @@
   </div>
 </div>
 
-<!-- ════ 7. PATHWAY VIEW ════ -->
-<div class="view" id="view-pathway">
-  <div class="pw-container">
-    <div class="pw-intro" data-en="Law Pathway: Sequential Progression of 613 Commandments Across Categories" data-zh="律法路徑圖：613 條誡命在 14 個法典範疇間的連動分佈與流向軌跡。"></div>
-    <div id="pathwayWrap"></div>
-  </div>
-</div>
-
-<!-- ════ 8. STREAMS VIEW ════ -->
-<div class="view" id="view-streams">
-  <div class="streams-container">
-    <div class="streams-intro" data-en="Torah Streams: Volume & Activity of Each Book Flowing Across Categories" data-zh="律法之流：流動圖視覺化展現五卷書在 14 大法典主題中的份額交織與分佈寬度。"></div>
-    <div id="streamsWrap"></div>
-  </div>
-</div>
-
-<!-- ════ 10. READING PLAN VIEW (54 Parashot) ════ -->
+<!-- ════ 7. READING PLAN VIEW (54 Parashot) ════ -->
 <div class="view" id="view-reading">
   <div class="rp-container">
     <div class="rp-header">
@@ -331,8 +362,6 @@
 <script src="js/views/map.js"></script>
 <script src="js/views/radial.js"></script>
 <script src="js/views/category-grid.js"></script>
-<script src="js/views/pathway.js"></script>
-<script src="js/views/streams.js"></script>
 
 </body>
 </html>

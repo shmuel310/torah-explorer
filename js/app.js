@@ -158,8 +158,6 @@ function showView(name) {
   if (name === 'map' && window.renderJourneyMap) window.renderJourneyMap();
   if (name === 'radial' && window.renderTorahWheel) window.renderTorahWheel();
   if (name === 'category-grid' && window.renderCategoryGrid) window.renderCategoryGrid();
-  if (name === 'pathway' && window.renderPathway) window.renderPathway();
-  if (name === 'streams' && window.renderStreams) window.renderStreams();
   if (name === 'reading' && window.renderReadingPlan) window.renderReadingPlan();
 }
 

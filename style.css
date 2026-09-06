@@ -154,19 +154,26 @@ header p { color:#C4BEB5; font-size:13px; font-weight:300; max-width:600px; marg
 .gcell .gc-off { width:26px; height:22px; border-radius:4px; display:inline-flex; align-items:center; justify-content:center; font-size:8px; font-weight:500; color:#D4CFC8; background:#F0EDE8; }
 
 /* ── JOURNEY MAP VIEW ── */
-#view-map { max-width:1040px; margin:0 auto; padding:24px 16px 80px; }
+#view-map { max-width:1160px; margin:0 auto; padding:24px 16px 80px; }
 .map-layout { display:grid; grid-template-columns:1fr 340px; gap:20px; align-items:start; }
-@media(max-width:860px) { .map-layout { grid-template-columns:1fr; } }
+@media(max-width:960px) { .map-layout { grid-template-columns:1fr; } }
 .map-left-col { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:18px 20px; }
-.map-title-bar h3 { font-size:14px; font-weight:700; color:var(--text); }
-.map-title-bar p { font-size:11px; color:var(--muted); margin-top:2px; margin-bottom:12px; }
-.map-svg-wrap svg { width:100%; height:auto; display:block; filter:drop-shadow(0 4px 12px rgba(0,0,0,.08)); }
-.map-legend-row { display:flex; flex-wrap:wrap; gap:8px 16px; margin-top:14px; padding-top:12px; border-top:1px solid var(--border); font-size:11px; color:var(--muted); }
+.map-title-bar h3 { font-size:15px; font-weight:700; color:var(--text); }
+.map-title-bar p { font-size:11.5px; color:var(--muted); margin-top:3px; margin-bottom:12px; line-height:1.5; }
+.map-controls-row { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:14px; }
+.map-era-bar { display:flex; flex-wrap:wrap; gap:6px; }
+.map-era-btn { padding:5px 13px; border-radius:999px; border:1.5px solid var(--border); background:var(--bg); color:var(--muted); font-family:inherit; font-size:11px; font-weight:600; cursor:pointer; transition:all .15s; }
+.map-era-btn:hover { border-color:var(--gold); color:var(--text); }
+.map-era-btn.active { background:var(--text); color:white; border-color:var(--text); }
+.map-zoom-toggle { padding:5px 14px; border-radius:999px; border:1.5px solid var(--gold); background:rgba(200,169,106,.12); color:#8A6D3B; font-family:inherit; font-size:11px; font-weight:700; cursor:pointer; transition:all .15s; display:inline-flex; align-items:center; gap:5px; }
+.map-zoom-toggle:hover { background:var(--gold); color:white; }
+.map-svg-wrap svg { width:100%; height:auto; display:block; filter:drop-shadow(0 4px 12px rgba(0,0,0,.08)); transition:all .35s ease; }
+.map-legend-row { display:flex; flex-wrap:wrap; gap:10px 18px; margin-top:14px; padding-top:12px; border-top:1px solid var(--border); font-size:11px; color:var(--muted); }
 .map-leg-item { display:flex; align-items:center; gap:6px; }
 .map-leg-dot { width:10px; height:10px; border-radius:50%; }
 
 .map-sidebar { position:sticky; top:70px; }
-.station-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:18px; }
+.station-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:18px; max-height:calc(100vh - 120px); overflow-y:auto; }
 .station-placeholder { text-align:center; color:var(--muted); font-size:12.5px; padding:40px 10px; }
 .st-num { font-size:10px; font-weight:700; color:var(--gold); text-transform:uppercase; letter-spacing:.1em; }
 .st-title { font-size:16px; font-weight:700; margin:4px 0 2px; color:var(--text); }
@@ -177,16 +184,58 @@ header p { color:#C4BEB5; font-size:13px; font-weight:300; max-width:600px; marg
 .st-law-item:hover { background:var(--border); }
 
 /* ── RADIAL / TORAH WHEEL VIEW ── */
-#view-radial { max-width:860px; margin:0 auto; padding:24px 16px 80px; }
-.rad-container { display:flex; flex-direction:column; align-items:center; }
-.rad-toolbar { margin-bottom:16px; }
+#view-radial { max-width:1160px; margin:0 auto; padding:24px 16px 80px; }
+.rad-container { display:flex; flex-direction:column; }
+.rad-header { text-align:center; margin-bottom:20px; }
+.rad-title { font-size:18px; font-weight:700; color:var(--text); }
+.rad-subtitle { font-size:12px; color:var(--muted); margin-top:4px; margin-bottom:14px; }
+.rad-toolbar { display:flex; justify-content:center; }
 .rad-toggle { display:flex; gap:6px; }
 .rad-tog { padding:6px 18px; border-radius:999px; border:1.5px solid var(--border); background:var(--card); color:var(--muted); font-family:inherit; font-size:11.5px; font-weight:600; cursor:pointer; transition:all .15s; }
 .rad-tog.active { background:var(--text); color:white; border-color:var(--text); }
-.rad-svg-wrap { width:100%; max-width:620px; }
+
+.rad-layout { display:grid; grid-template-columns:1fr 440px; gap:24px; align-items:start; }
+@media(max-width:960px) { .rad-layout { grid-template-columns:1fr; } }
+.rad-wheel-col { display:flex; flex-direction:column; align-items:center; background:var(--card); border:1px solid var(--border); border-radius:12px; padding:18px; }
+.rad-svg-wrap { width:100%; max-width:540px; cursor:crosshair; user-select:none; }
 .rad-svg-wrap svg { width:100%; height:auto; display:block; }
-.rad-info { margin-top:14px; background:var(--card); border:1px solid var(--border); border-radius:10px; padding:12px 20px; font-size:12px; color:var(--muted); text-align:center; min-height:48px; display:flex; align-items:center; justify-content:center; }
-.rad-info strong { color:var(--text); font-size:13px; }
+.rad-wheel-tip { display:flex; align-items:center; gap:8px; font-size:11.5px; color:var(--muted); margin-top:12px; padding:7px 16px; background:var(--bg); border-radius:999px; border:1px solid var(--border); }
+.rad-tip-icon { font-size:13px; }
+
+.rad-inspector-col { display:flex; flex-direction:column; gap:14px; position:sticky; top:70px; }
+.rad-scrub-box { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:14px 18px; }
+.rad-scrub-top { display:flex; align-items:center; gap:10px; }
+.rad-nav-btn { width:32px; height:32px; border-radius:8px; border:1px solid var(--border); background:var(--bg); font-size:12px; font-weight:700; color:var(--text); cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all .15s; flex-shrink:0; }
+.rad-nav-btn:hover { background:var(--text); color:white; border-color:var(--text); }
+.rad-scrub-center { flex:1; display:flex; flex-direction:column; gap:4px; }
+.rad-range { width:100%; accent-color:var(--gold); cursor:pointer; }
+.rad-scrub-label { font-size:11px; font-weight:700; color:var(--muted); text-align:center; }
+.rad-book-pills { display:flex; gap:6px; margin-top:10px; justify-content:center; flex-wrap:wrap; }
+.rad-bpill { padding:3px 10px; border-radius:6px; border:1px solid var(--border); background:var(--bg); font-size:11px; font-weight:600; cursor:pointer; transition:all .15s; }
+.rad-bpill:hover { border-color:var(--gold); transform:translateY(-1px); }
+.rad-bpill.f-Gen { color:#4A5D73; border-color:rgba(74,93,115,.3); }
+.rad-bpill.f-Exo { color:#934B43; border-color:rgba(147,75,67,.3); }
+.rad-bpill.f-Lev { color:#C8A96A; border-color:rgba(200,169,106,.3); }
+.rad-bpill.f-Num { color:#D6A84C; border-color:rgba(214,168,76,.3); }
+.rad-bpill.f-Deu { color:#526851; border-color:rgba(82,104,81,.3); }
+
+.rad-inspector-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; box-shadow:0 4px 14px rgba(0,0,0,.03); }
+.rad-card-badges { display:flex; flex-wrap:wrap; gap:6px; align-items:center; margin-bottom:12px; }
+.rad-badge-id { font-size:19px; font-weight:800; color:var(--text); margin-right:4px; }
+.rad-badge-book { padding:3px 10px; border-radius:999px; color:white; font-size:11px; font-weight:700; }
+.rad-badge-type { padding:3px 10px; border-radius:999px; font-size:11px; font-weight:600; }
+.rad-badge-type.pos { background:rgba(200,169,106,.18); color:#8A6D3B; border:1px solid rgba(200,169,106,.4); }
+.rad-badge-type.neg { background:rgba(74,93,115,.15); color:#364557; border:1px solid rgba(74,93,115,.3); }
+.rad-badge-cat { padding:3px 10px; border-radius:999px; font-size:10.5px; font-weight:600; background:var(--bg); color:var(--muted); border:1px solid var(--border); }
+.rad-card-title-zh { font-size:18px; font-weight:700; color:var(--text); line-height:1.45; margin-bottom:4px; }
+.rad-card-title-en { font-size:14px; font-weight:500; color:#57534E; line-height:1.4; margin-bottom:12px; }
+.rad-card-ref { font-size:12px; color:var(--muted); display:flex; align-items:center; gap:6px; padding-bottom:12px; border-bottom:1px solid var(--border); margin-bottom:12px; }
+.rad-scripture-box { background:var(--bg); border:1px solid var(--border); border-radius:8px; padding:12px 14px; margin-bottom:14px; display:flex; flex-direction:column; gap:8px; }
+.rad-scripture-zh { font-size:13.5px; color:var(--text); line-height:1.6; }
+.rad-scripture-en { font-size:12px; color:#57534E; font-style:italic; line-height:1.5; }
+.rad-scripture-he { font-family:"Ezra SIL", "SBL Hebrew", serif; font-size:15px; color:#1C1917; direction:rtl; text-align:right; line-height:1.7; }
+.rad-open-modal-btn { width:100%; padding:10px 16px; border-radius:8px; background:#2B2B2B; color:white; font-family:inherit; font-size:12.5px; font-weight:600; border:none; cursor:pointer; transition:background .15s; display:flex; align-items:center; justify-content:center; gap:6px; }
+.rad-open-modal-btn:hover { background:#44403C; }
 
 /* ── CATEGORY GRID VIEW ── */
 #view-category-grid { max-width:960px; margin:0 auto; padding:24px 16px 80px; }
@@ -198,12 +247,6 @@ header p { color:#C4BEB5; font-size:13px; font-weight:300; max-width:600px; marg
 .cg-bubble { display:inline-flex; align-items:center; justify-content:center; border-radius:50%; font-weight:700; font-size:10px; color:white; cursor:pointer; transition:transform .15s; }
 .cg-bubble:hover { transform:scale(1.2); }
 .cg-detail-panel { margin-top:20px; padding-top:16px; border-top:1px solid var(--border); }
-
-/* ── PATHWAY & STREAMS ── */
-#view-pathway, #view-streams { max-width:960px; margin:0 auto; padding:24px 16px 80px; }
-.pw-container, .streams-container { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; }
-.pw-intro, .streams-intro { font-size:12px; color:var(--muted); text-align:center; margin-bottom:16px; }
-#pathwayWrap svg, #streamsWrap svg { width:100%; height:auto; display:block; }
 
 /* ── READING PLAN (54 Parashot) ── */
 #view-reading { max-width:840px; margin:0 auto; padding:28px 16px 80px; }
